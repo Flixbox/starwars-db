@@ -1,3 +1,7 @@
+interface SwapiRoot {
+  [key: string]: string;
+}
+
 interface SwapiEntity {
   name?: string;
   title?: string;
@@ -12,4 +16,4 @@ interface SwapiEntityList {
   results: SwapiEntity[];
 }
 
-export type { SwapiEntity, SwapiEntityList };
+export type { SwapiRoot, SwapiEntity, SwapiEntityList };
