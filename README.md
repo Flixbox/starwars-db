@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project that displays Star Wars related 
 
 - Set up Bun
 - `bun i` to install dependencies
-- `bun dev` to start the dev server
+- `bun start` to start the dev server (Note: This will kill any current processes on port 3000 before starting the dev server. You can remove the "prestart" script if you don't want this behavior.)
 
 ## AI disclosure
 

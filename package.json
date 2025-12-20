@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "prestart": "bunx kill-port 3000",
+    "start": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "bunx @biomejs/biome@2.3.6 check"
   },
   "dependencies": {
