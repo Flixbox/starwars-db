@@ -6,7 +6,9 @@
     "prestart": "bunx kill-port 3000",
     "start": "next dev",
     "build": "next build",
-    "lint": "bunx @biomejs/biome@2.3.6 check"
+    "lint": "bunx npm-run-all --continue-on-error \"lint:*\"",
+    "lint:biome": "bunx @biomejs/biome@2.3.6 check",
+    "lint:typecheck": "bunx tsc --noEmit"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

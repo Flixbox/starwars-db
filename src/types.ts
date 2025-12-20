@@ -6,7 +6,7 @@ interface SwapiEntity {
   name?: string;
   title?: string;
   url: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface SwapiEntityList {
