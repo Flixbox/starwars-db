@@ -4,6 +4,8 @@ Uses Swapi - https://swapi.py4e.com
 
 All elements are auto-generated from the Swapi root data. This keeps this platform flexible - Any new resources added to Swapi will be automatically available in this platform, including completely new resource types.
 
+[![Maintainability](https://qlty.sh/gh/Flixbox/projects/starwars-db/maintainability.svg)](https://qlty.sh/gh/Flixbox/projects/starwars-db)
+
 ## Getting Started
 
 - Set up Bun
