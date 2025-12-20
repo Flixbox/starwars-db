@@ -17,6 +17,8 @@ This includes:
 
 No agentic AI systems were used in this repository.
 
+My goal is to **understand the tech and the task, creating an implementation plan in my mind, then writing the code**. I do not use AI to write code, but to assist me in this endeavour. 
+
 ## Timing
 
 - Start of work in this repository: 2025-12-20 17:10
