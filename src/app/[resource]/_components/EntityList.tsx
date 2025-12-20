@@ -9,6 +9,12 @@ interface EntityListProps {
   initialData: SwapiEntityList;
 }
 
+/**
+ * Endpoint: `/{resource}`
+ *
+ * Lists entities with a "Load more" button.
+ * Capable of dynamically loading more entities from the API.
+ */
 const EntityList: React.FC<EntityListProps> = ({ initialData }) => {
   const [data, setData] = useState(initialData);
   const [next, setNext] = useState(initialData.next);

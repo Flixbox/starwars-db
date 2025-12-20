@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import { Shell } from "@/components";
+import { Shell } from "./_components/Shell";
 import { theme } from "./theme";
 
 export const metadata: Metadata = {

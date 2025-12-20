@@ -1,7 +1,7 @@
 import { Title } from "@mantine/core";
 import { fetchEntityList } from "@/api";
-import { EntityList } from "@/components";
 import type { SwapiEntityList } from "@/types";
+import { EntityList } from "./_components/EntityList";
 
 interface EntityListPageProps {
   params: Promise<{

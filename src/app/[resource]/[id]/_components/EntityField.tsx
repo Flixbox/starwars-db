@@ -8,6 +8,8 @@ import {
 import type { SwapiEntity } from "@/types";
 
 /**
+ * Endpoint: `/{resource}/{id}`
+ *
  * Dynamically renders a field based on its value.
  * - Arrays are rendered recursively.
  * - Hyperlinks are converted to internal links.

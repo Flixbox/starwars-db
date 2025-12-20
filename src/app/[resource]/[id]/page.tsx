@@ -1,7 +1,7 @@
 import { Box, Stack, Text, Title } from "@mantine/core";
 import { fetchEntity, getEntityDescriptor } from "@/api";
-import { EntityField } from "@/components";
 import type { SwapiEntity } from "@/types";
+import { EntityField } from "./_components/EntityField";
 
 interface EntityPageProps {
   params: Promise<{
