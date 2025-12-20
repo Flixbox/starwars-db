@@ -1,4 +1,4 @@
-import { BASE_DOMAIN } from "@/api/swapi";
+import { BASE_API } from "@/api/swapi";
 import type { SwapiEntity } from "@/types";
 
 /**
@@ -21,7 +21,7 @@ const getEntityDescriptor = (entity: SwapiEntity): string =>
   entity.name || entity.title || "";
 
 const isSwapiUrl = (value: string): boolean => {
-  return value.indexOf(BASE_DOMAIN) > -1;
+  return value.startsWith(BASE_API);
 };
 
 export { getInternalUrl, isSwapiUrl, getEntityDescriptor };
