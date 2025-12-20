@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 const App = () => {
-  redirect("/characters")
+  redirect("/people");
 };
 
-export default App
+export default App;
