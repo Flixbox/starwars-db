@@ -1,13 +1,28 @@
-import { getInternalUrl, isSwapiUrl } from "@/api";
+import { fetchEntity, getInternalUrl, isSwapiUrl } from "@/api";
+import { SwapiEntity } from "@/types";
 import { NavLink, Text } from "@mantine/core";
 
-const EntityField: React.FC<{ value: unknown }> = ({ value }) => {
+/**
+ * Dynamically renders a field based on its value.
+ * - Arrays are rendered recursively.
+ * - Hyperlinks are converted to internal links.
+ * - Unknown types are not rendered.
+ */
+const EntityField: React.FC<{ value: unknown }> = async ({ value }) => {
   if (Array.isArray(value)) {
     return value.map((item) => <EntityField key={item} value={item} />);
   }
   if (typeof value === "string") {
     if (isSwapiUrl(value)) {
-      return <NavLink href={getInternalUrl(value)} label={value} />;
+      let entity: SwapiEntity;
+      try {
+        entity = await fetchEntity(value);
+      } catch (error) {
+        console.error(error);
+        return <div>Failed to fetch entity {value}</div>;
+      }
+
+      return <NavLink href={getInternalUrl(value)} label={entity.name} />;
     }
     return <Text>{value}</Text>;
   }

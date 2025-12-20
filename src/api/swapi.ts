@@ -29,17 +29,27 @@ const fetchEntityList = async (resource: string): Promise<SwapiEntityList> => {
   return res.json();
 };
 
+interface FetchEntity {
+  (resource: string, id: string): Promise<SwapiEntity>;
+  (url: string): Promise<SwapiEntity>;
+}
+
 /**
  * Fetches a single entity's details from the SWAPI.
  * The result is cached for 1 hour.
  *
+ * You can either pass a URL or a resource and an ID.
+ *
  * @link https://swapi.py4e.com/documentation#people
  */
-const fetchEntity = async (
-  resource: string,
-  id: string,
+const fetchEntity: FetchEntity = async (
+  resourceOrUrl: string,
+  id?: string,
 ): Promise<SwapiEntity> => {
-  const res = await fetch(`${BASE_API}/${resource}/${id}`, {
+  const assembledUrl = id
+    ? `${BASE_API}/${resourceOrUrl}/${id}`
+    : resourceOrUrl;
+  const res = await fetch(assembledUrl, {
     next: { revalidate: 3600 },
   });
   return res.json();
