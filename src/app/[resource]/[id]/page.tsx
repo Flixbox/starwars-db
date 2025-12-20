@@ -1,4 +1,4 @@
-import { fetchEntity } from "@/api";
+import { fetchEntity, getEntityDescriptor } from "@/api";
 import { EntityField } from "@/components";
 import type { SwapiEntity } from "@/types";
 import { Box, Stack, Title, Text } from "@mantine/core";
@@ -29,11 +29,11 @@ const EntityPage: React.FC<EntityPageProps> = async ({ params }) => {
   }
   return (
     <>
-      <Title>{entity.name}</Title>
+      <Title>{getEntityDescriptor(entity)}</Title>
       <Stack>
         {Object.entries(entity).map(([key, value]) => (
           <Box key={key} mt={1}>
-            <Text>{key}</Text>
+            <Text fs="italic">{key}</Text>
             <EntityField key={key} value={value} />
           </Box>
         ))}

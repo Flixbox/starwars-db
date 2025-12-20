@@ -1,4 +1,9 @@
-import { fetchEntity, getInternalUrl, isSwapiUrl } from "@/api";
+import {
+  fetchEntity,
+  getInternalUrl,
+  isSwapiUrl,
+  getEntityDescriptor,
+} from "@/api";
 import { SwapiEntity } from "@/types";
 import { NavLink, Text } from "@mantine/core";
 
@@ -25,7 +30,7 @@ const EntityField: React.FC<{ value: unknown }> = async ({ value }) => {
     return (
       <NavLink
         href={getInternalUrl(value)}
-        label={entity.name || entity.title}
+        label={getEntityDescriptor(entity)}
       />
     );
   }

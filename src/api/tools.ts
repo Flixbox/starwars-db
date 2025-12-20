@@ -1,4 +1,5 @@
 import { BASE_DOMAIN } from "@/api/swapi";
+import type { SwapiEntity } from "@/types";
 
 /**
  * We can dynamically convert SWAPI URLs to internal URLs because we map the API to our webapp.
@@ -16,8 +17,11 @@ const getInternalUrl = (swapiurl: string): string => {
   return "/";
 };
 
+const getEntityDescriptor = (entity: SwapiEntity): string =>
+  entity.name || entity.title || "";
+
 const isSwapiUrl = (value: string): boolean => {
   return value.indexOf(BASE_DOMAIN) > -1;
 };
 
-export { getInternalUrl, isSwapiUrl };
+export { getInternalUrl, isSwapiUrl, getEntityDescriptor };
