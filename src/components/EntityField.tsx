@@ -12,18 +12,25 @@ const EntityField: React.FC<{ value: unknown }> = async ({ value }) => {
   if (Array.isArray(value)) {
     return value.map((item) => <EntityField key={item} value={item} />);
   }
-  if (typeof value === "string") {
-    if (isSwapiUrl(value)) {
-      let entity: SwapiEntity;
-      try {
-        entity = await fetchEntity(value);
-      } catch (error) {
-        console.error(error);
-        return <div>Failed to fetch entity {value}</div>;
-      }
 
-      return <NavLink href={getInternalUrl(value)} label={entity.name} />;
+  if (typeof value === "string" && isSwapiUrl(value)) {
+    let entity: SwapiEntity;
+    try {
+      entity = await fetchEntity(value);
+    } catch (error) {
+      console.error(error);
+      return <div>Failed to fetch entity {value}</div>;
     }
+
+    return (
+      <NavLink
+        href={getInternalUrl(value)}
+        label={entity.name || entity.title}
+      />
+    );
+  }
+
+  if (typeof value === "string" || typeof value === "number") {
     return <Text>{value}</Text>;
   }
 
