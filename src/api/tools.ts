@@ -1,0 +1,21 @@
+import { BASE_DOMAIN } from "@/api/swapi";
+
+/**
+ * We can dynamically convert SWAPI URLs to internal URLs because we map the API to our webapp.
+ */
+const getInternalUrl = (swapiurl: string): string => {
+  const parts = swapiurl.split("/api/")[1].split("/").filter(Boolean);
+  if (parts.length >= 2) {
+    return `/${parts[0]}/${parts[1]}`;
+  }
+  if (parts.length === 1) {
+    return `/${parts[0]}`;
+  }
+  return "/";
+};
+
+const isSwapiUrl = (value: string): boolean => {
+  return value.indexOf(BASE_DOMAIN) > -1;
+};
+
+export { getInternalUrl, isSwapiUrl };
