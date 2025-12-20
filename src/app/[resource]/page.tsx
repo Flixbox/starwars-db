@@ -1,3 +1,4 @@
+import { Title } from "@mantine/core";
 import { fetchEntityList } from "@/api";
 import { EntityList } from "@/components";
 import type { SwapiEntityList } from "@/types";
@@ -21,7 +22,12 @@ const EntityListPage: React.FC<EntityListPageProps> = async ({ params }) => {
     console.error(error);
     return <div>Failed to fetch entity list {resource}</div>;
   }
-  return <EntityList initialData={entityList} />;
+  return (
+    <>
+      <Title>{resource}</Title>
+      <EntityList initialData={entityList} />
+    </>
+  );
 };
 
 export default EntityListPage;
