@@ -33,6 +33,12 @@ Some issues that I've encountered during development.
 
 Run `bun x next telemetry disable` to disable telemetry.
 
+### Failed to fetch root data
+
+This is expected behavior if the API is down or rate limited to 10k requests per hour.
+
+If you just deployed this to a cloud service (like Vercel) and it's not working, this is because the cloud service shares IPs with many deployed services. Use the webapp locally or deploy it to a cloud service that provides a dedicated IP.
+
 ## AI disclosure
 
 This project is mostly written by hand, with some assistance from AI.
