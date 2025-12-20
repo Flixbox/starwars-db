@@ -1,4 +1,5 @@
 import { fetchEntityList } from "@/api";
+import { EntityList } from "@/components";
 import type { SwapiEntityList } from "@/types";
 
 interface EntityListPageProps {
@@ -20,7 +21,7 @@ const EntityListPage: React.FC<EntityListPageProps> = async ({ params }) => {
     console.error(error);
     return <div>Failed to fetch entity list {resource}</div>;
   }
-  return <div>{JSON.stringify(entityList)}</div>;
+  return <EntityList initialData={entityList} />;
 };
 
 export default EntityListPage;
