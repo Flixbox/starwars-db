@@ -1,5 +1,3 @@
-import { fetchRoot } from "@/api";
-import type { SwapiRoot } from "@/types";
 import {
   AppShell,
   AppShellHeader,
@@ -10,6 +8,8 @@ import {
   Stack,
   Text,
 } from "@mantine/core";
+import { fetchRoot } from "@/api";
+import type { SwapiRoot } from "@/types";
 
 const Shell: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
   let rootData: SwapiRoot;

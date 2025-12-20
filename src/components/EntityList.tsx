@@ -1,17 +1,15 @@
 "use client";
 
-import { getInternalUrl } from "@/api";
-import { SwapiEntityList } from "@/types";
 import { Button, NavLink, Stack } from "@mantine/core";
 import { useState } from "react";
+import { getInternalUrl } from "@/api";
+import type { SwapiEntityList } from "@/types";
 
 interface EntityListProps {
   initialData: SwapiEntityList;
 }
 
-const EntityList: React.FC<EntityListProps> = ({
-  initialData,
-}) => {
+const EntityList: React.FC<EntityListProps> = ({ initialData }) => {
   const [data, setData] = useState(initialData);
   const [next, setNext] = useState(initialData.next);
   const [loading, setLoading] = useState(false);

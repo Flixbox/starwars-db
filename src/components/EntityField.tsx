@@ -1,11 +1,11 @@
+import { NavLink, Text } from "@mantine/core";
 import {
   fetchEntity,
+  getEntityDescriptor,
   getInternalUrl,
   isSwapiUrl,
-  getEntityDescriptor,
 } from "@/api";
-import { SwapiEntity } from "@/types";
-import { NavLink, Text } from "@mantine/core";
+import type { SwapiEntity } from "@/types";
 
 /**
  * Dynamically renders a field based on its value.

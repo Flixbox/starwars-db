@@ -28,6 +28,7 @@ This includes:
 
 - Creating a [fully vibe-coded version of this project](https://github.com/Flixbox/starwars-db-vibecoded) for reference & learning the basics of Next.js, but **not code reuse**.
 - Using Gemini 3 Flash to auto-complete small statements.
+- Favicon
 
 No agentic AI systems are used to write code in **this** repository. They are however used to **explain and debug** issues and concepts.
 
