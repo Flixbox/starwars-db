@@ -8,16 +8,16 @@ This is a [Next.js](https://nextjs.org) project that displays Star Wars related 
 
 ## AI disclosure
 
-This project was mostly written by hand, with some assistance from AI.
+This project is mostly written by hand, with some assistance from AI.
 
 This includes:
 
 - Creating a [fully vibe-coded version of this project](https://github.com/Flixbox/starwars-db-vibecoded) for reference & learning the basics of Next.js, but **not code reuse**.
 - Using Gemini 3 Flash to auto-complete small statements.
 
-No agentic AI systems were used in this repository.
+No agentic AI systems are used to write code in **this** repository. They are however used to **explain** issues and concepts.
 
-My goal is to **understand the tech and the task, creating an implementation plan in my mind, then writing the code**. I do not use AI to write code, but to assist me in this endeavour. 
+My goal is to **understand the tech and the task, creating an implementation plan in my mind, then writing the code**. I do not use AI to write all of the code, but to assist me in this endeavour. 
 
 ## Timing
 

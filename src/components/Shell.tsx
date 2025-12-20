@@ -1,5 +1,7 @@
+import { AppShell } from "@mantine/core";
+
 const Shell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <div>Shell</div>;
+  return <AppShell>{children}</AppShell>;
 };
 
 export { Shell };
