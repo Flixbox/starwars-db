@@ -29,6 +29,10 @@ Some issues that I've encountered during development.
 - Delete the `.next` folder
 - Start the server again
 
+### `[FETCH ERROR] POST https://telemetry.nextjs.org/api/v1/record`
+
+Run `bun x next telemetry disable` to disable telemetry.
+
 ## AI disclosure
 
 This project is mostly written by hand, with some assistance from AI.
