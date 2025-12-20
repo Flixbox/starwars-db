@@ -3,7 +3,9 @@ import type { SwapiRoot } from "@/types";
 import {
   AppShell,
   AppShellHeader,
+  AppShellMain,
   AppShellNavbar,
+  Container,
   NavLink,
   Stack,
   Text,
@@ -19,9 +21,16 @@ const Shell: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
   }
 
   return (
-    <AppShell>
+    <AppShell
+      header={{ height: 30 }}
+      navbar={{
+        width: 100,
+        breakpoint: 0,
+      }}
+      padding="md"
+    >
       <AppShellHeader>
-        <Text>Star Wars DB</Text>
+        <Text size="xl">Star Wars DB</Text>
       </AppShellHeader>
 
       <AppShellNavbar>
@@ -35,7 +44,9 @@ const Shell: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
           ))}
         </Stack>
       </AppShellNavbar>
-      {children}
+      <AppShellMain>
+        <Container>{children}</Container>
+      </AppShellMain>
     </AppShell>
   );
 };

@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project that displays Star Wars related 
 
 Uses Swapi - https://swapi.py4e.com
 
+All elements are auto-generated from the Swapi root data. This keeps this platform flexible - Any new resources added to Swapi will be automatically available in this platform, including completely new resource types.
+
 ## Getting Started
 
 - Set up Bun
