@@ -18,7 +18,7 @@ const getInternalUrl = (swapiurl: string): string => {
 };
 
 const getEntityDescriptor = (entity: SwapiEntity): string =>
-  entity.name || entity.title || "";
+  entity.name ?? entity.title ?? "";
 
 const isSwapiUrl = (value: string): boolean => {
   return value.startsWith(BASE_API);
