@@ -10,6 +10,14 @@ All elements are auto-generated from the Swapi root data. This keeps this platfo
 - `bun i` to install dependencies
 - `bun start` to start the dev server (Note: This will kill any current processes on port 3000 before starting the dev server. You can remove the "prestart" script if you don't want this behavior.)
 
+## Run the tests
+
+- Go through the "Getting Started" section
+- `playwright install` to set up playwright
+- `bun prestart` to kill anything on port 3000
+- `bun test:update` to update the hars & run the tests
+- `bun test` to run the tests with premade hars
+
 ## Known issues
 
 Some issues that I've encountered during development.
