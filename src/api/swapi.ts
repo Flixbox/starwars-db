@@ -1,7 +1,6 @@
 import type { SwapiEntity, SwapiEntityList, SwapiRoot } from "@/types";
 
-const BASE_DOMAIN = "swapi.py4e.com";
-const BASE_API = `https://${BASE_DOMAIN}/api`;
+const BASE_API = `https://swapi.py4e.com/api`;
 
 /**
  * Fetches the root of the SWAPI, containing links to all resources.
@@ -55,4 +54,4 @@ const fetchEntity: FetchEntity = async (
   return res.json();
 };
 
-export { BASE_DOMAIN, BASE_API, fetchRoot, fetchEntityList, fetchEntity };
+export { BASE_API, fetchRoot, fetchEntityList, fetchEntity };

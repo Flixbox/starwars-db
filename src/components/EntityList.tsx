@@ -2,7 +2,7 @@
 
 import { Button, NavLink, Stack } from "@mantine/core";
 import { useState } from "react";
-import { getInternalUrl } from "@/api";
+import { getEntityDescriptor, getInternalUrl } from "@/api";
 import type { SwapiEntityList } from "@/types";
 
 interface EntityListProps {
@@ -39,7 +39,7 @@ const EntityList: React.FC<EntityListProps> = ({ initialData }) => {
           <NavLink
             key={entity.url}
             href={getInternalUrl(entity.url)}
-            label={entity.name}
+            label={getEntityDescriptor(entity)}
           />
         ))}
       </Stack>
