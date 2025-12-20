@@ -39,6 +39,11 @@ This is expected behavior if the API is down or rate limited to 10k requests per
 
 If you just deployed this to a cloud service (like Vercel) and it's not working, this is because the cloud service shares IPs with many deployed services. Use the webapp locally or deploy it to a cloud service that provides a dedicated IP.
 
+## Tried & Failed
+
+- Using HAR files to mock the API responses - Impossible due to SSR
+- Cloud deployment - API is harshly rate limited & IP is shared with other services
+
 ## AI disclosure
 
 This project is mostly written by hand, with some assistance from AI.
@@ -56,4 +61,4 @@ My goal is to **understand the tech and the task, creating an implementation pla
 ## Timing
 
 - Start of work in this repository: 2025-12-20 17:10
-- End of work in this repository: 2025-12-20 22:30
+- End of work in this repository: 2025-12-20 22:32
