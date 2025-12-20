@@ -16,14 +16,21 @@ const theme = createTheme({
 });
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const defaultColorScheme = "dark";
+  /**
+   * On `suppressHydrationWarning`:
+   * There will be a mismatch between the client and server rendered HTML.
+   * The mismatch is `data-mantine-color-scheme="light"` on the `html` element.
+   * This is expected and can be safely ignored.
+   */
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <ColorSchemeScript defaultColorScheme={defaultColorScheme} />
+      </head>
       <body className={inter.className}>
-        <MantineProvider theme={theme} defaultColorScheme="dark">
-          <Shell>
-            <ColorSchemeScript />
-            {children}
-          </Shell>
+        <MantineProvider theme={theme} defaultColorScheme={defaultColorScheme}>
+          <Shell>{children}</Shell>
         </MantineProvider>
       </body>
     </html>
