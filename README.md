@@ -15,8 +15,7 @@ All elements are auto-generated from the Swapi root data. This keeps this platfo
 - Go through the "Getting Started" section
 - `playwright install` to set up playwright
 - `bun prestart` to kill anything on port 3000
-- `bun test:update` to update the hars & run the tests
-- `bun test` to run the tests with premade hars
+- `bun run test` to run the tests
 
 ## Known issues
 

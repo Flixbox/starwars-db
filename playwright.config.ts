@@ -1,12 +1,13 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './e2e',
+  testDir: "./e2e",
+  testMatch: "**/*.e2e.ts",
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: "http://localhost:3000",
   },
   webServer: {
-    command: 'bun start',
-    url: 'http://localhost:3000',
+    command: "bun start",
+    url: "http://localhost:3000",
   },
 });
