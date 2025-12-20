@@ -1,5 +1,5 @@
 import { fetchEntity } from "@/api";
-import { SwapiEntity } from "@/types";
+import type { SwapiEntity } from "@/types";
 
 interface EntityPageProps {
   params: Promise<{

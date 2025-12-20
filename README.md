@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project that displays Star Wars related data.
 
+Uses Swapi - https://swapi.py4e.com
+
 ## Getting Started
 
 - Set up Bun
