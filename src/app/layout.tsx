@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { Shell } from "@/components";
+import { theme } from "./theme";
 
 export const metadata: Metadata = {
   title: "Star Wars DB",
@@ -22,7 +23,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <ColorSchemeScript defaultColorScheme={defaultColorScheme} />
       </head>
       <body>
-        <MantineProvider defaultColorScheme={defaultColorScheme}>
+        <MantineProvider defaultColorScheme={defaultColorScheme} theme={theme}>
           <Shell>{children}</Shell>
         </MantineProvider>
       </body>
