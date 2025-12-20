@@ -11,6 +11,12 @@ import {
 import { fetchRoot } from "@/api";
 import type { SwapiRoot } from "@/types";
 
+/**
+ * Main navigation, header, and content wrapper.
+ *
+ * Note: The "active" prop of NavLink cannot be set, since this is an SSR component.
+ * Retrieving the current path of the browser to highlight the currently selected sidebar link would require a client component.
+ */
 const Shell: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
   let rootData: SwapiRoot;
   try {
